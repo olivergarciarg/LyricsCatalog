@@ -1,0 +1,48 @@
+{% extends "main.html" %}
+{% block content %}
+	<!--<div class = 'flash row'>-->
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<div class = 'flash row'>
+				<ul>
+					{% for message in messages %}
+						<li> <strong> {{ message }} </strong> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+	{% endwith %}
+	<!--</div>-->
+	<section class="container-flex my-container">
+		<div class="row my-row">
+			<div class="col-sm-12 col-md-12 my-col">
+				<div class="lyrics-div">
+					<div class="lyrics-header">
+						<h2>{{ category_name }}</h2>
+					</div>
+					<div class="lyrics-header">
+						<h3>{{ song.band }} - {{ song.name }}</h3>
+					</div>
+					<textarea readonly class="lyrics-box">{{ song.lyrics }}</textarea><br>
+					{%if 'username' not in session %}
+						<p>Login to edit or delete this song</p>
+					{% else %}
+						{% if authorized_user == 0 %}
+							<p>You are not authorized to Edit or Delete this song, you may only edit or delete songs that you have added</p>
+						{% else %}
+							<div class="edit-delete">
+								<a href="{{url_for('editSong', category_name = category_name, song_band=song.band, song_name=song.name)}}">Edit song</a>
+							</div>
+							<div class="edit-delete">
+								<a href="{{url_for('deleteSong', category_name = category_name, song_band=song.band, song_name=song.name)}}">Delete song</a>
+							</div>
+						{% endif %}
+					{% endif %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+{% endblock %}

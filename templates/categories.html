@@ -1,0 +1,54 @@
+{% extends "main.html" %}
+{% block content %}
+	<!--<div class = 'flash row'>-->
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<div class = 'flash row'>
+        		<ul>
+        			{% for message in messages %}
+            			<li> <strong> {{ message }} </strong> </li>
+        			{% endfor %}
+				</ul>
+			</div>
+        {% endif %}
+    {% endwith %}
+	<!--</div>-->
+	<section class="container-flex my-container">
+		<div class="row my-row">
+			<div class="col-sm-6 col-md-6 my-col">
+				<div class="inner-div">
+					{% for eachCategory in categories %}
+						<a href = "{{url_for('showSongs', category_name = eachCategory.name)}}">
+							<div class="category-list">
+								<h3>{{eachCategory.name}}</h3>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 my-col">
+				<div class="inner-div">
+					{%if 'username' not in session %}
+						<div class="category-list-header">
+								<h3>Login to add, edit or delete songs</h3>
+						</div>
+					{% else %}
+						<div class="category-list-header">
+								<h3>Select a category to add, edit or delete songs in that category</h3>
+						</div>
+					{% endif %}
+					<div class="category-list-header">
+						<h3>Latest songs</h3>
+					</div>
+					{% for eachSong in songs %}
+						<a href = "{{url_for('showSongsLyrics', category_name = eachSong.music_category.name, song_band = eachSong.band, song_name = eachSong.name)}}">
+							<div class="category-list">
+								<h3>{{eachSong.band}} - {{eachSong.name}}</h3>
+							</div>
+						</a>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>	
+{% endblock %}

@@ -1,0 +1,164 @@
+h3 {
+	font-size: 18px;
+	color: #4A4A4A;
+	line-height: 23px;
+}
+
+a {
+	font-size: 14px;
+	color: #0093B9;
+	line-height: 17px;
+}
+
+.btn {
+	padding: 20px;
+	margin: 0;
+	border-color: #9FB80A;
+	border-width: 2px;
+	color: #9FB80A;;
+}
+
+.btn:hover {
+	border-color: #9FB80A;
+}
+
+.btn.delete {
+	border-color: #aaaaaa;
+	color: #aaaaaa;
+}
+
+.btn.delete:hover {
+	border-color: #aaaaaa;
+	color: red;
+}
+
+.glyphicon {
+	margin-right: 10px;
+}
+
+.top-menu {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.top-menu a {
+	margin-bottom: 0;
+	line-height: 16px;
+	font-size: 16px;
+	color: #7B7573;
+	font-weight: 400;
+}
+
+.category-list {
+	background-color: #F0F0F0;
+	padding: 10px;
+}
+
+.lyrics-header {
+	background-color: #F0F0F0;
+	padding: 10px;
+	width:100%
+}
+
+.category-list-header{
+	background-color: rgb(223, 228, 233);
+	padding: 10px;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.category-list:hover {
+	background-color: #e1e17f;
+	padding: 10px;
+}
+
+.flash {
+	background-color: #98FB98;
+	width:100%;
+	text-decoration: none;
+	box-sizing: border-box;
+	padding:10px;
+	margin:auto;
+}
+
+.flash li {
+	list-style-type: none;
+	text-align: center;
+}
+
+.login {
+	max-width: 40%;
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+.log-inbox {
+	max-width: 400px;
+	border-width:2px;
+	border-style:solid;
+	border-color:black;
+}
+
+.my-horizontal-ruler {
+	border-width: 3px;
+	border-color: darkslategrey;
+}
+
+.my-container{
+	padding-top:10px;
+	padding-bottom:10px;
+	width:100%;
+	box-sizing: content-box;
+}
+
+.my-row{
+	height:100%;
+	width:100%;
+	box-sizing: border-box;
+	padding:10px;
+	margin:auto;
+}
+
+.my-col{
+	box-sizing: border-box;
+	padding:10px;
+	margin:auto;
+}
+
+.inner-div{
+	border: 2px solid green;
+	height:100%;
+	width:100%;
+	margin:auto;
+}
+
+.lyrics-div{
+	border: 2px solid green;
+	height:100%;
+	width:50%;
+	margin:auto;
+}
+
+.edit-div{
+	border: 2px solid green;
+	height:100%;
+	width:50%;
+	margin:auto;
+	padding:10px;
+}
+
+.lyrics-box{
+	padding:10px;
+	resize: none;
+	border: 2px solid lightgrey;
+	height:200px;
+	width:100%;
+	margin:auto;
+	text-align: justify;
+	text-justify: inter-word;
+	text-indent: 0px;
+}
+
+.edit-delete {
+	padding:5px 5px 10px 10px;
+}

@@ -1,0 +1,46 @@
+{% extends "main.html" %}
+{% block content %}
+
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			<div class = 'flash row'>
+				<ul>
+					{% for message in messages %}
+						<li> <strong> {{ message }} </strong> </li>
+					{% endfor %}
+				</ul>
+			</div>
+		{% endif %}
+	{% endwith %}
+
+	<section class="container-flex my-container">
+		<div class="row my-row">
+			<div class="col-sm-12 col-md-12 my-col">
+				<div class="edit-div">
+					<div class="lyrics-header">
+						<h3>Add a new song in category {{ selected_category.name }}</h3>
+					</div>
+					<form action="{{url_for('addSong', category_name = selected_category.name)}}" method = "post">
+						<div class="form-group">
+							<label for="bandname">Band name:</label>
+							<input type ="text" maxlength="250" class="form-control" id="bandname" name="bandname" placeholder="Name of the band">
+							<br>
+							<label for="songname">Song name:</label>
+							<input type ="text" maxlength="250" class="form-control" id="songname" name="songname" placeholder="Name of the song">
+							<br>
+							<label for="lyrics">Lyrics:</label>
+							<textarea class="form-control" maxlength="3000" rows="20" id="lyrics" name="lyrics" placeholder="la la la..."></textarea>
+							<br>
+							<button type="submit" class="btn btn-default create" id="submit">
+								<span class="glyphicon glyphicon-music" aria-hidden="true"></span>Add song
+							</button>
+							<a class="btn btn-default cancel" href="{{url_for('showSongs', category_name = selected_category.name )}}">
+								<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Cancel
+							</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
