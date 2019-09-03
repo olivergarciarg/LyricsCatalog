@@ -25,25 +25,31 @@ session.add(user1)
 session.commit()
 
 
-category1 = MusicCategory(name="Rock", description="broad genre of popular music that originated as 'rock and roll' in the United States in the early 1950s, and developed into a range of different styles in the 1960s")
+category1 = MusicCategory(name="Rock", 
+                          description="broad genre of popular music that originated as 'rock and roll' in the United "
+                                      "States in the early 1950s, and developed into a range of different styles in "
+                                      "the 1960s")
 session.add(category1)
 session.commit()
 
-song1 = Song(name="Chop Suey", band = "System of a down", lyrics="Wake up \
-    Grab a brush and put a little (makeup)\
-    Grab a brush and put a little\
-    Hide the scars to fade away the (shakeup)\
-    Hide the scars to fade away the\
-    Why'd you leave the keys upon the table?\
-    Here you go create another fable\
-    You wanted to\
-    Grab a brush and put a little makeup\
-    You wanted to\
-    Hide the scars to fade away the shakeup\
-    You wanted to\
-    Why'd you leave the keys upon the table?\
-    You wanted to"
-    , user=user1, music_category=category1)
+song1 = Song(name="Chop Suey", 
+             band="System of a down", 
+             lyrics="Wake up \
+             Grab a brush and put a little (makeup)\
+             Grab a brush and put a little\
+             Hide the scars to fade away the (shakeup)\
+             Hide the scars to fade away the\
+             Why'd you leave the keys upon the table?\
+             Here you go create another fable\
+             You wanted to\
+             Grab a brush and put a little makeup\
+             You wanted to\
+             Hide the scars to fade away the shakeup\
+             You wanted to\
+             Why'd you leave the keys upon the table?\
+             You wanted to", 
+             user=user1, 
+             music_category=category1)
 session.add(song1)
 session.commit()
 
@@ -100,4 +106,4 @@ session.add(song4)
 session.commit()
 
 
-print ("added menu items!")
+print ("added song items!")
