@@ -56,7 +56,7 @@ a {
 
 .lyrics-header {
 	background-color: #F0F0F0;
-	padding: 10px;
+	padding: 5px;
 	width:100%
 }
 
@@ -88,8 +88,8 @@ a {
 
 .login {
 	max-width: 40%;
-	margin-left: auto; 
-	margin-right: auto; 
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .log-inbox {
@@ -162,3 +162,21 @@ a {
 .edit-delete {
 	padding:5px 5px 10px 10px;
 }
+
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	float:right;
+}
+
+.creator img {
+	width: 50px;
+	border-radius: 50%;
+}
+
+.creator figcaption {
+	font-size: 14px;
+	color: #7B7573;
+	font-weight: 400;
+	margin-top: -20px;
