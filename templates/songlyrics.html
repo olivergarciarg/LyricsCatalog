@@ -21,7 +21,9 @@
 						<h2>{{ category_name }}</h2>
 					</div>
 					<div class="lyrics-header">
-						<h3>{{ song.band }} - {{ song.name }}</h3>
+						<h3>
+						    {{ song.band }} - {{ song.name }}
+						</h3>
 					</div>
 					<textarea readonly class="lyrics-box">{{ song.lyrics }}</textarea><br>
 					{%if 'username' not in session %}
